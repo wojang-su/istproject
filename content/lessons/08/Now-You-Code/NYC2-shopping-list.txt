@@ -2,4 +2,4 @@ milk
 cheese
 eggs
 beer
-apples
+apple
