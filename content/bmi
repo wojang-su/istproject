@@ -1,0 +1,443 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def pound2kg(weight):\n",
+    "    weight_kg = weight * 0.453592\n",
+    "    return weight_kg"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function pound2kg\n",
+    "#1. def pound2kg(pound weight):\n",
+    "#2. weight_kg is pound weight * 0.453592\n",
+    "#3. return weight_kg"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def inch2cm(height):\n",
+    "    height_cm = (height * 2.54)\n",
+    "    return height_cm"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function inch2cm\n",
+    "#1. def inch2cm(inch height):\n",
+    "#2. height_cm is inch height * 2.54\n",
+    "#3. return height_cm"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def ft2inch(height_feet):\n",
+    "    height_inch = (height_feet * 12)\n",
+    "    return height_inch\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function ft2inch\n",
+    "#1. def ft2inch(feet height)\n",
+    "#2. height_inch = (feet height * 12)\n",
+    "#3. return height_inch"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def bmi(height_cm, weight_kg):\n",
+    "    user_bmi = weight_kg / ((height_cm * 0.01) * (height_cm * 0.01))\n",
+    "    return user_bmi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function bmi\n",
+    "#1. def bmi(centimeter height, kilogram weight)\n",
+    "#2. user_bmi is weight_kg / (height_cm * 0.01) * (height_cm * 0.01)\n",
+    "#3. return user_bmi"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def height_clear(text):\n",
+    "    if text.find(\"cm\") >= 0:\n",
+    "        text = text.replace(\"cm\", \"\").replace(\" \",\"\")\n",
+    "        height = float(text)\n",
+    "    elif text.find(\"CM\") >= 0:\n",
+    "        text = text.replace(\"CM\", \"\").replace(\" \",\"\")\n",
+    "        height = float(text)\n",
+    "    elif text.find(\"Cm\") >= 0:\n",
+    "        text = text.replace(\"CM\", \"\").replace(\" \",\"\")\n",
+    "        height = float(text)\n",
+    "    else:\n",
+    "        text =  text.replace(\" \", \"\")\n",
+    "        height = (text)\n",
+    "        \n",
+    "    return height"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function height_clear\n",
+    "#1. def height_clear(user_input)\n",
+    "#2. Make an if statement to find \" \", cm\",\"CM\" or \"Cm\" if user entered like that\n",
+    "#3. Then change \" \", cm\", \"CM\" or \"Cm\" to \"\"\n",
+    "#4. return height which is fixed out"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "def weight_clear(text):\n",
+    "    if text.find(\"kg\") >= 0:\n",
+    "        text = text.replace(\"kg\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    elif text.find(\"KG\") >= 0:\n",
+    "        text = text.replace(\"KG\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    elif text.find(\"Kg\") >= 0:\n",
+    "        text = text.replace(\"Kg\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    elif text.find(\"Pound\") >= 0:\n",
+    "        text = text.replace(\"Pound\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    elif text.find(\"POUND\") >= 0:\n",
+    "        text = text.replace(\"POUND\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    elif text.find(\"pound\") >= 0:\n",
+    "        text = text.replace(\"pound\", \"\").replace(\" \",\"\")\n",
+    "        weight = float(text)\n",
+    "    else:\n",
+    "        text =  text.replace(\" \", \"\")\n",
+    "        weight = float(text)\n",
+    "        \n",
+    "    return weight"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Explanation of function weight_clear\n",
+    "#1. def weight_clear(user_input)\n",
+    "#2. Make an if statement to find \" \", \"kg\",\"KG\",\"Kg\", \"Pound\", \"POUND\", or \"pound\" if user entered like that\n",
+    "#3. Then change \" \", \"kg\",\"KG\",\"Kg\", \"Pound\", \"POUND\", or \"pound\"to \"\"\n",
+    "#4. return weight which is fixed out"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {
+    "scrolled": false
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "This is BMI calculator\n",
+      "Height is in which unit [Cm/Feet]: cm\n",
+      "Please Enter your height: [For feet&inch please enter like (#\"#)]180cm\n",
+      "Weight is in which unit [Kg/Pound]: kg\n",
+      "Please Enter your weight: 70\n",
+      "Here are meal recommendations~\n",
+      "Normal weight\n",
+      "                                Meal Recommendations\n",
+      "0  Meal One: Egg Toast+low fat milk(300 calories)...\n",
+      "1  Meal Two: Ravioli+Vegetable soup (600 calories...\n",
+      "2  Meal Three: Salmon & Vegetable (700 calories) ...\n",
+      "\n",
+      " An normal weighted person's BMI is 24.9\n",
+      " A under weighted person's BMI is 18.5\n",
+      " A over weighted person's BMI is 29.9\n",
+      " Your BMI level is 21.604938\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "<iframe id=\"igraph\" scrolling=\"no\" style=\"border:none;\" seamless=\"seamless\" src=\"https://plot.ly/~zengfa1997/6.embed\" height=\"525px\" width=\"100%\"></iframe>"
+      ],
+      "text/plain": [
+       "<plotly.tools.PlotlyDisplay object>"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import plotly\n",
+    "import plotly.plotly as py \n",
+    "import plotly.graph_objs as go  \n",
+    "import cufflinks as cf\n",
+    "import pandas as pd\n",
+    "import warnings\n",
+    "\n",
+    "warnings.filterwarnings('ignore') \n",
+    "\n",
+    "try:\n",
+    "    print(\"This is BMI calculator\")\n",
+    "    unit_height = input(\"Height is in which unit [Cm/Feet]: \").upper().replace(' ','')\n",
+    "    height = height_clear(input('Please Enter your height: [For feet&inch please enter like (#\"#)]'))\n",
+    "    if unit_height == 'CM':\n",
+    "        height_cm = float(height)\n",
+    "    elif unit_height == 'FEET':\n",
+    "        height_feet, height_inch = height.split('\"')\n",
+    "        height_feet = float(height_feet)\n",
+    "        height_inch = float(height_inch)\n",
+    "        height_inch = height_inch + ft2inch(height_feet)\n",
+    "        height_cm = inch2cm(height_inch)\n",
+    "    else:\n",
+    "        print(\"I cannot convert that\")\n",
+    "    unit_weight = input(\"Weight is in which unit [Kg/Pound]: \").upper().replace(' ','')\n",
+    "    weight = weight_clear((input(\"Please Enter your weight: \")))\n",
+    "    if unit_weight == 'KG':\n",
+    "        weight_kg = weight\n",
+    "    elif unit_weight == 'POUND':\n",
+    "        weight_kg = pound2kg(weight)\n",
+    "    else:\n",
+    "        print(\"I cannot convert that\")\n",
+    "\n",
+    "    user_bmi = bmi(height_cm, weight_kg)\n",
+    "    print(\"Here are meal recommendations~\")\n",
+    "    if user_bmi <= 18.5:\n",
+    "        print(\"Underweight\")\n",
+    "        print(\"You are underweight. these meal plans are good for you to gain more weight\") \n",
+    "        website = 'http://listmoz.com/view/fgcpl3cSvYQ6Tdt3J1'\n",
+    "        data1 = pd.read_html(website)\n",
+    "        meal_recommend_underweight = data1[0]\n",
+    "        meal_recommend_underweight.columns = ['','Meal Recommendations']\n",
+    "        print(meal_recommend_underweight[['Meal Recommendations']])\n",
+    "\n",
+    "    elif user_bmi <=24.9:\n",
+    "        print(\"Normal weight\")\n",
+    "        website = 'http://listmoz.com/view/tfnRCDgfDSP44KbPk'\n",
+    "        data1 = pd.read_html(website)\n",
+    "        meal_recommend_normalweight = data1[0]\n",
+    "        meal_recommend_normalweight.columns = ['','Meal Recommendations']\n",
+    "        print(meal_recommend_normalweight[['Meal Recommendations']])\n",
+    "        \n",
+    "    elif user_bmi <= 29.9:\n",
+    "        print(\"Overweight\")\n",
+    "        website = 'http://listmoz.com/view/Xqcv8Ffvyd5nLTglx'\n",
+    "        data1 = pd.read_html(website)\n",
+    "        meal_recommend_overweight = data1[0]\n",
+    "        meal_recommend_overweight.columns = ['','Meal Recommendations']\n",
+    "        print(meal_recommend_overweight[['Meal Recommendations']])\n",
+    "        \n",
+    "    else: \n",
+    "        print(\"Obesity\")\n",
+    "        website = 'http://listmoz.com/view/Cmt5PdSNpqP2bQ3x'\n",
+    "        data1 = pd.read_html(website)\n",
+    "        meal_recommend_obese = data1[0]\n",
+    "        meal_recommend_obese.columns = ['','Meal Recommendations']\n",
+    "        print(meal_recommend_obese[['Meal Recommendations']])\n",
+    "\n",
+    "except ValueError:\n",
+    "    print(\"Invalid Input. Program Quitting.\")\n",
+    "except TypeError:\n",
+    "    print(\"Cannot convert input. Program Quitting.\")\n",
+    "    \n",
+    "plotly.tools.set_credentials_file(username='zengfa1997', api_key='MYEbcdJQPBHKXktIO3A7')\n",
+    "\n",
+    "body = { 'subjects' : ['under weight', 'average', 'over weight','your bmi'],\n",
+    "    \t'level' : [18.5, 24.9, 29.9, user_bmi]\n",
+    "    \t}\n",
+    "\n",
+    "body_df = pd.DataFrame(body)\n",
+    "bmi_chart = body_df.iplot(kind='bar', x='subjects', y='level', title='The Super Accurate BMI Chart', xTitle='BMI Types', yTitle='BMI Level')\n",
+    "print(\"\")\n",
+    "print(\" An normal weighted person's BMI is 24.9\")\n",
+    "print(\" A under weighted person's BMI is 18.5\")\n",
+    "print(\" A over weighted person's BMI is 29.9\")\n",
+    "print(\" Your BMI level is %f\" % user_bmi)\n",
+    "bmi_chart"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "## Program Explanation\n",
+    "\n",
+    "##Inputs:\n",
+    "#1. User's Height unit (CM, Feet)\n",
+    "#2. User's height (For example: 180 or 180cm)\n",
+    "#3. User's Weight unit (Kg, Pound)\n",
+    "#4. User's Weight (For example: 70 or 70kg)\n",
+    "\n",
+    "##Outputs:\n",
+    "#1. One of weight type from underweight, Normal weight, Overweight and Obesity based on BMI\n",
+    "#2. If user type different value or type, then print (\"Invalid input\") or print (\"Cannot convert input\")\n",
+    "\n",
+    "## Algorithm (Steps in Program):\n",
+    "#1. Import pandas\n",
+    "#2. Import ignore warnings\n",
+    "#3. Import plotly\n",
+    "#4. Import plotly.plotly as py\t \n",
+    "#5. Import plotly.graph_objs as go  \n",
+    "#6. Import cufflinks as cf\n",
+    "#7. Import pandas as pd\n",
+    "#8. print(\"This is BMI Calculator)\n",
+    "#9. Input user's height unit cm and feet, For feet(number of feet\" number of inch)\n",
+    "#10. Make upper letter user's input and replace \" \" to \"\"\n",
+    "#11. Make an function height_clear to prevent input error when user try to input cm or space or CM to height input\n",
+    "#12. Input user's height with height clear function\n",
+    "#13. Make a if and elif statement to figure out user's unit\n",
+    "#14. If unit is \"CM\" then, height is height_cm which is based on centimeters\n",
+    "#15. Elif unit is \"Feet\" then split \" for (# of feet\"# of inch), # of feet is height_feet and # of inch is height_inch\n",
+    "#16. Make a float type for both height_feet and height_inch\n",
+    "#17. Make a function ft2inch which change feet to inch\n",
+    "#18. Change height_feet to height_inch using by function ft2inch and add with height_inch, so get total height_inch\n",
+    "#19. Make an function inch2cm and change total height_inch to height_cm\n",
+    "#20. Input user's weight unit (KG or Pound)\n",
+    "#21. Make upper letter user's input and replace \" \" to \"\"\n",
+    "#22. Input user's weight\n",
+    "#23. Make an function weight_clear to prevent input error when user try to input kg or space or pound to weight input\n",
+    "#24. Input user's weight with weight_clear function\n",
+    "#25. If unit is \"KG\", then weight is weight_kg which is based on kilogram\n",
+    "#26. Make an function pound2kg to change pound to kilogram\n",
+    "#27. Elif unit is \"Pound\" then change pound to kilogram using by function pound2kg\n",
+    "#28. else print(\"I can not convert that\")\n",
+    "#29. Make an function bmi which returns user's bmi based on height_cm and weight_kg\n",
+    "#30. Make an if statement to distribute user's weight type\n",
+    "#31. if bmi <= 18.5, then print (\"Underweight\")\n",
+    "#32. elif bmi <= 24.9, then print (\"Normal weight\")\n",
+    "#33. elif bmi <= 29.9, then print (\"Overweight\")\n",
+    "#34. else which is over 30, then print (\"Obesity\")\n",
+    "#35. Scrap data from the website and save it to data1\n",
+    "#36. Make a list of data type to data1[0] and change the name of data1[0] to meal_preference_weight type\n",
+    "#37. Make a column for data type which is meal preferences\n",
+    "#38. Print out the weigth type with meal preferances \n",
+    "#39. Make a Try and Except statement to prevent error, for this program we prevent TypeError and ValueError.\n",
+    "#40. Convert data of average weighted/ under weighted/ over weighted person’s BMI on a bar graph\n",
+    "#41. Recall back to the user’s bmi level and plot it onto the graph\n",
+    "#42. Program shows everything depends on user's bmi and done"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "collapsed": true
+   },
+   "outputs": [],
+   "source": [
+    "#Who did what\n",
+    "#After the project is approved, we started doing the actual project. \n",
+    "#Our program has an objective of  checking health body weight for people and calculate either that person is Overweight, \n",
+    "#Underweight, or average. In order to do that, we had to come up with a BMI calculator. \n",
+    "#Woosung made a program in which any person can input his or her weight and height, in kg/lbs and cm/inch. \n",
+    "#Woosung created a function that can calculate bmi, convert inch to cm, lbs to kg, and output the result for the person’s bmi.  \n",
+    "#Also Woosung made a poster for demo-day.\n",
+    "#Yirui found websites that contain information about what kind of food is good to the certain group of people according to their bmi. \n",
+    "#He grabbed the information we need from the website, and list of data them in our program. \n",
+    "#Zengfa did the program visualization. He created a chart where the user can see what the bmi distribution should be among people, \n",
+    "#and will be able to see their own standing. \n",
+    "#And together, we examined the code one last time to prevent possible errors in our program."
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+
